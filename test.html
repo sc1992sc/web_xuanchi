@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+//    function mul(x) {
+//        const result = (y) => mul(x * y);
+//        result.valueOf = () => x;
+//        return result;
+//    }
+
+    function mul(x){
+        var result=function(y){
+            console.log(y)
+            return mul(x*y)
+        }
+
+        result.valueOf=function(){
+            console.log(x)
+            return x
+        }
+        console.log(typeof(result))
+        console.log(result)
+
+        return result
+    }
+    mul(3)
+
+</script>
+
+</body>
+</html>
